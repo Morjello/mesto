@@ -23,5 +23,5 @@ closeIcon.addEventListener('click', togglePopup)
 ```
 ### Ссылка проекта на GitHub Pages:
 
-https://morjello.github.io/russian-travel/
+https://morjello.github.io/mesto/
 
