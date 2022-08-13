@@ -1,17 +1,27 @@
-# Проект: Место
+# **Проект: Место**
+## *Место* - это одностроничный сайт, посвященный великому исследоваетлю!
 
-### Обзор
+## В работе используются такие технологии, как:
 
-* Figma
-* Картинки
+### Адаптивная верстка:
 
-**Figma**
+ ```css
+  @media screen and (min-width: 768px) {
+   .cool {
+      width: calc(100% + 32px);
+   }
+  }
+```
+### Открытие окна редактирования:
+```javascript
+const togglePopup = function () {
+   popup.classList.toggle('popup_opened')
+}
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+openPopup.addEventListener('click', togglePopup)
+closeIcon.addEventListener('click', togglePopup)
+```
+### Ссылка проекта на GitHub Pages:
 
-**Картинки**
+https://morjello.github.io/russian-travel/
 
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
-
-Удачи!

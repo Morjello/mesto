@@ -1,0 +1,11 @@
+.profile__cell {
+   display: flex;
+   align-items: center;
+   margin-bottom: 14px;
+}
+
+@media screen and (min-width: 1024px) {
+   .profile__cell {
+      margin-bottom: 16px;
+   }
+}

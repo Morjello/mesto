@@ -1,0 +1,16 @@
+.table__heart {
+   background-image: url(../../../images/Heart.svg);
+   background-repeat: no-repeat;
+   width: 22px;
+   height: 19px;
+}
+
+.table__heart:hover {
+   opacity: 0.6;
+   transition: 0.3s ease;
+   cursor: pointer;
+}
+
+.table__heart:active {
+   color: #000;
+}

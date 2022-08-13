@@ -1,0 +1,12 @@
+.table {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+   justify-items: center;
+   gap: 20px;
+}
+
+@media screen and (min-width: 1280px) {
+   .table {
+      gap: 17px;
+   }
+}
