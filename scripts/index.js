@@ -84,14 +84,17 @@ function cardsDeleteHandler(e) {
    cardDelete.remove();
 };
 
+// POPUP-IMAGE
 function openPopupImage(item) {
    return function () {
       popupImage.classList.add('popup-image_opened');
       popupImageText.textContent = item.title;
       popupImageImage.src = item.link;
-      console.log(123)
    }
+}
 
+function closePopupImage() {
+   popupImage.classList.toggle('popup-image_opened');
 }
 
 // CARDS
@@ -116,15 +119,8 @@ function addCard(item) {
    cardElement.querySelector('.cards__popup-image').addEventListener('click', openPopupImage(item));
    cardsTable.prepend(cardElement);
 }
-
-function closePopupImage() {
-   popupImage.classList.toggle('popup-image_opened');
-   console.log(123)
-}
-
 initialCards.forEach(addCard);
 
-// POPUP-IMAGE 
 openEditPopup.addEventListener('click', togglePopup);
 closePopup.addEventListener('click', togglePopup);
 formElement.addEventListener('submit', formSubmitHandler);
