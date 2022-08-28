@@ -1,4 +1,3 @@
-const popup = document.querySelector('.popup');
 const closeButtons = document.querySelectorAll('.popup__close-icon');
 const profilePopup = document.querySelector('.profile-popup');
 const editProfilePopupBtn = document.querySelector('.profile__edit-button');
@@ -97,8 +96,8 @@ function handleDeleteCard(e) {
 
 function openPopupImage(e) {
    const cardsImage = e.target.closest('.cards__image');
-   imgSrc = cardsImage.getAttribute('src');
-   imgAlt = cardsImage.getAttribute('alt');
+   const imgSrc = cardsImage.getAttribute('src');
+   const imgAlt = cardsImage.getAttribute('alt');
    popupImagePhoto.setAttribute('src', imgSrc);
    popupImagePhoto.setAttribute('alt', imgAlt);
    popupImageText.textContent = imgAlt;
@@ -108,9 +107,10 @@ function openPopupImage(e) {
 function createCard(item) {
    const cardTemplate = document.querySelector('.template').content;
    const cardElement = cardTemplate.querySelector('.cards__card').cloneNode(true);
+   const cardImage = cardElement.querySelector('.cards__image')
+   cardImage.src = item.link;
+   cardImage.alt = item.title;
    cardElement.querySelector('.cards__text').textContent = item.title;
-   cardElement.querySelector('.cards__image').src = item.link;
-   cardElement.querySelector('.cards__image').alt = item.title;
    cardElement.querySelector('.cards__heart').addEventListener('click', handleLikeCard);
    cardElement.querySelector('.cards__delete').addEventListener('click', handleDeleteCard);
    cardElement.querySelector('.cards__image-button').addEventListener('click', openPopupImage);
