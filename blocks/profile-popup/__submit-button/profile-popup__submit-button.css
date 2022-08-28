@@ -1,4 +1,4 @@
-.popup__submit-button {
+.profile-popup__submit-button {
    background-color: #000;
    height: 46px;
    margin-top: 15px;
@@ -11,14 +11,14 @@
    line-height: 17px;
 }
 
-.popup__submit-button:hover {
+.profile-popup__submit-button:hover {
    opacity: 0.8;
    transition: 0.3s ease;
    cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
-   .popup__submit-button {
+   .profile-popup__submit-button {
       height: 50px;
       margin-top: 18px;
       font-size: 18px;

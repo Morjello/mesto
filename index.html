@@ -36,61 +36,6 @@
       <!-- CARDS -->
       <section class="cards">
          <ul class="cards__table">
-            <!--
-            <li class="cards__card">
-               <button type="button" class="cards__delete"></button>
-               <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="cards__image">
-               <div class="cards__cell">
-                  <h2 class="cards__text">Карачаевск</h2>
-                  <button type="button" class="cards__heart"></button>
-               </div>
-            </li>
-
-            <li class="cards__card">
-               <button type="button" class="cards__delete"></button>
-               <img src="./images/elbrus.jpg" alt="Гора Эльбрус" class="cards__image">
-               <div class="cards__cell">
-                  <h2 class="cards__text">Гора Эльбрус</h2>
-                  <button type="button" class="cards__heart"></button>
-               </div>
-            </li>
-
-            <li class="cards__card">
-               <button type="button" class="cards__delete"></button>
-               <img src="./images/dombay.jpg" alt="Домбай" class="cards__image">
-               <div class="cards__cell">
-                  <h2 class="cards__text">Домбай</h2>
-                  <button type="button" class="cards__heart"></button>
-               </div>
-            </li>
-
-            <li class="cards__card">
-               <button type="button" class="cards__delete"></button>
-               <img src="./images/elbrus.jpg" alt="Гора Эльбрус" class="cards__image">
-               <div class="cards__cell">
-                  <h2 class="cards__text">Гора Эльбрус</h2>
-                  <button type="button" class="cards__heart"></button>
-               </div>
-            </li>
-
-            <li class="cards__card">
-               <button type="button" class="cards__delete"></button>
-               <img src="./images/dombay.jpg" alt="Домбай" class="cards__image">
-               <div class="cards__cell">
-                  <h2 class="cards__text">Домбай</h2>
-                  <button type="button" class="cards__heart"></button>
-               </div>
-            </li>
-
-            <li class="cards__card">
-               <button type="button" class="cards__delete"></button>
-               <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="cards__image">
-               <div class="cards__cell">
-                  <h2 class="cards__text">Карачаевск</h2>
-                  <button type="button" class="cards__heart"></button>
-               </div>
-            </li>
-            -->
          </ul>
       </section>
    </main>
@@ -100,15 +45,15 @@
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
    </footer>
 
-   <!-- POPUP -->
+   <!-- PROFILE-POPUP -->
 
-   <div class="popup">
-      <div class="popup__container">
-         <h2 class="popup__title">Редактировать профиль</h2>
-         <form class="popup__form" name="Form">
-            <input type="text" class="popup__input popup__input_type_name" name="Name" value="">
-            <input type="text" class="popup__input popup__input_type_bio" name="Bio" value="">
-            <button class="popup__submit-button" type="submit">Сохранить</button>
+   <div class="popup profile-popup">
+      <div class="profile-popup__container">
+         <h2 class="profile-popup__title">Редактировать профиль</h2>
+         <form class="profile-popup__form" name="Profile-Form">
+            <input type="text" class="profile-popup__input profile-popup__input_type_name" name="Name" value="">
+            <input type="text" class="profile-popup__input profile-popup__input_type_bio" name="Bio" value="">
+            <button class="profile-popup__submit-button" type="submit">Сохранить</button>
          </form>
          <button type="button" class="popup__close-icon"></button>
       </div>
@@ -116,29 +61,29 @@
 
    <!-- POPUP-ADD -->
 
-   <div class="popup-add">
+   <div class="popup popup-add">
       <div class="popup-add__container">
          <h2 class="popup-add__title">Новое место</h2>
-         <form class="popup-add__form" name="Form">
+         <form class="popup-add__form" name="Add-Form">
             <input type="text" class="popup-add__input popup-add__input_type_title" name="Title" value=""
                placeholder="Название">
             <input type="text" class="popup-add__input popup-add__input_type_link" name="Link" value=""
                placeholder="Ссылка на картинку">
             <button class="popup-add__submit-button" type="submit">Создать</button>
          </form>
-         <button type="button" class="popup-add__close-icon"></button>
+         <button type="button" class="popup__close-icon"></button>
       </div>
    </div>
 
    <!-- POPUP-IMAGE -->
 
-   <div class="popup-image">
+   <div class="popup popup-image">
       <div class="popup-image__container">
          <img
             src="https://images.unsplash.com/photo-1661344662632-ac54c94c8416?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1975&q=80"
-            alt="Фотография" class="popup-image__image">
+            alt="Фотография" class="popup-image__photo">
          <p class="popup-image__text"></p>
-         <button type="button" class="popup-image__close"></button>
+         <button type="button" class="popup__close-icon"></button>
       </div>
    </div>
 
@@ -147,7 +92,7 @@
    <template class="template">
       <li class="cards__card">
          <button type="button" class="cards__delete"></button>
-         <button class="cards__popup-image">
+         <button class="cards__image-button">
             <img
                src="https://images.unsplash.com/photo-1661344662632-ac54c94c8416?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1975&q=80"
                alt="Фотография" class="cards__image">
