@@ -1,3 +1,5 @@
+const popup = document.querySelector('.popup');
+const popupWrapper = document.querySelector('.main__wrapper')
 const closeButtons = document.querySelectorAll('.popup__close-icon');
 const profilePopup = document.querySelector('.profile-popup');
 const editProfilePopupBtn = document.querySelector('.profile__edit-button');
@@ -18,6 +20,7 @@ const popupImageText = document.querySelector('.popup-image__text');
 const popupImagePhoto = document.querySelector('.popup-image__photo');
 const cardsText = document.querySelector('.cards__text');
 const cardsImage = document.querySelector('.cards__image');
+
 const initialCards = [
    {
       title: 'Форд',
@@ -51,6 +54,25 @@ function openPopup(popup) {
 
 function closePopup(popup) {
    popup.classList.remove('popup_opened');
+};
+
+popupWrapper.addEventListener('click', (e) => {
+   if (
+      e.target.classList.contains('popup') ||
+      e.target.classList.contains('.popup__close-icon') ||
+      e.target.classList.contains('popup__container')
+   ) {
+      closePopup(popupWrapper.querySelector('.popup_opened'))
+   }
+});
+
+function handleKeyEscape(e) {
+   if (e.key === 'Escape') {
+      const popupOpened = document.querySelector('.popup_opened');
+      closePopup(popupOpened);
+   } else {
+      document.removeEventListener('keydown', handleKeyEscape);
+   }
 };
 
 closeButtons.forEach((button) => {
@@ -126,3 +148,4 @@ initialCards.forEach(addCard);
 
 profileForm.addEventListener('submit', handleProfileFormSubmit);
 addForm.addEventListener('submit', handleAddFormSubmit);
+document.addEventListener('keydown', handleKeyEscape);

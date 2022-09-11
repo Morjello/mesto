@@ -1,24 +1,24 @@
-.popup-add__submit-button {
+.popup__button {
    background-color: #000;
+   color: #fff;
+   border: none;
    height: 46px;
    margin-top: 15px;
    padding: 0;
-   border: none;
    border-radius: 2px;
-   color: #fff;
    font-weight: 400;
    font-size: 14px;
    line-height: 17px;
 }
 
-.popup-add__submit-button:hover {
+.popup__button:hover {
    opacity: 0.8;
    transition: 0.3s ease;
    cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
-   .popup-add__submit-button {
+   .popup__button {
       height: 50px;
       margin-top: 18px;
       font-size: 18px;

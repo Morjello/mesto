@@ -32,6 +32,17 @@ function addCard(item) {
 }
 ```
 
+### Валидация форм:
+```javascript
+const isValid = (formElement, input) => {
+   if (!input.validity.valid) {
+      showInputError(formElement, input, input.validationMessage);
+   } else {
+      hideInputError(formElement, input);
+   }
+};
+```
+
 ### Ссылка проекта на GitHub Pages:
 
 https://morjello.github.io/mesto/
