@@ -1,6 +1,4 @@
 export class Card {
-   static cardTemplate = document.querySelector('.template').content;
-
    constructor(data, templateSelector, handleCardClick) {
       this._title = data.title;
       this._link = data.link;
@@ -12,9 +10,8 @@ export class Card {
       e.target.classList.toggle('cards__heart_active');
    };
 
-   _handleCardDelete(e) {
-      const cardDelete = e.target.closest('.cards__card');
-      cardDelete.remove();
+   _handleCardDelete() {
+      this._element.remove();
    };
 
    _createCard() {
