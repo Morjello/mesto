@@ -5,7 +5,6 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./pages/index.css">
    <title>Место</title>
 </head>
 
@@ -22,7 +21,7 @@
       <!-- PROFILE -->
 
       <section class="profile">
-         <img src="./images/Kusto.jpg" alt="Кусто" class="profile__image">
+         <img src="<%=require('./images/Kusto.jpg')%>" alt="Кусто" class="profile__image">
          <div class="profile__info">
             <div class="profile__cell">
                <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -94,7 +93,7 @@
       <div class="popup popup-image">
          <div class="popup__container popup-image__container">
             <img
-               src="https://images.unsplash.com/photo-1661344662632-ac54c94c8416?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1975&q=80"
+               src="<%=require('./images/sunset.jpg')%>"
                alt="Фотография" class="popup-image__photo">
             <p class="popup-image__text"></p>
             <button type="button" class="popup__close"></button>
@@ -109,7 +108,7 @@
          <button type="button" class="cards__delete"></button>
          <button class="cards__image-button">
             <img
-               src="https://images.unsplash.com/photo-1661344662632-ac54c94c8416?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1975&q=80"
+               src="<%=require('./images/sunset.jpg')%>"
                alt="Фотография" class="cards__image">
          </button>
          <div class="cards__cell">
@@ -118,8 +117,6 @@
          </div>
       </li>
    </template>
-
-   <script type="module" src="./scripts/index.js "></script>
 </body>
 
 </html>
