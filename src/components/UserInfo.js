@@ -1,9 +1,7 @@
 export class UserInfo {
-    constructor({name, bio}) {
-        this._name = name;
-        this._bio = bio;
-        console.log(this._name);
-        console.log(this._bio)
+    constructor({nameSelector, bioSelector}) {
+        this._name = nameSelector;
+        this._bio = bioSelector;
     }
 
     getUserInfo() {

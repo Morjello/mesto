@@ -7,7 +7,6 @@ export const addPopup = document.querySelector('.popup-add');
 export const addPopupBtn = document.querySelector('.profile__add-button');
 export const addForm = document.querySelector('.popup-add__form');
 export const popupImage = document.querySelector('.popup-image');
-export const popupAddSaveButton = document.querySelector('.popup-add__save-button');
 export const cardsTable = '.cards__table';
 export const validationConfig = {
    formSelector: '.popup__form',
