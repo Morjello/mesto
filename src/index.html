@@ -48,15 +48,15 @@
    <div class="root__wrapper">
       <div class="popup profile-popup">
          <div class="popup__container">
-            <h2 class="profile-popup__title">Редактировать профиль</h2>
+            <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form profile-popup__form" name="Profile-Form" novalidate>
                <label class="popup__label">
-                  <input type="text" class="popup__input profile-popup__input_type_name" placeholder="Ваше имя" id="name"
+                  <input type="text" class="popup__input" placeholder="Ваше имя" id="name"
                      name="name" value="" minlength="2" maxlength="40" required>
                   <span class="popup__error name-error"></span>
                </label>
                <label class="popup__label">
-                  <input type="text" class="popup__input profile-popup__input_type_bio" placeholder="Род деятельности" id="bio"
+                  <input type="text" class="popup__input" placeholder="Род деятельности" id="bio"
                      name="bio" value="" minlength="2" maxlength="200" required>
                   <span class="popup__error bio-error"></span>
                </label>
@@ -70,15 +70,15 @@
 
       <div class="popup popup-add">
          <div class="popup__container">
-            <h2 class="popup-add__title">Новое место</h2>
+            <h2 class="popup__title">Новое место</h2>
             <form class="popup__form popup-add__form" name="Add-Form" novalidate>
                <label class="popup__label">
-                  <input type="text" class="popup__input popup-add__input_type_title" id="title"
+                  <input type="text" class="popup__input" id="title"
                      name="title" value="" placeholder="Название" minlength="2" maxlength="30" required>
                   <span class="popup__error title-error"></span>
                </label>
                <label class="popup__label">
-                  <input type="url" class="popup__input popup-add__input_type_link" id="link"
+                  <input type="url" class="popup__input" id="link"
                      name="link" value="" placeholder="Ссылка на картинку" required>
                   <span class="popup__error link-error"></span>
                </label>
