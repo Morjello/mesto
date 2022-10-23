@@ -8,10 +8,10 @@ import { PopupWithForm } from '../components/PopupWithForm.js';
 import { UserInfo } from '../components/UserInfo.js';
 import {
    profilePopup,
-   editProfilePopupBtn,
+   profilePopupBtn,
    profileName, profileBio,
-   profileForm, addPopup,
-   addPopupBtn, addForm,
+   profileForm, popupAdd,
+   popupAddBtn, addForm,
    popupImage,
    cardsTable,
    validationConfig } from '../components/constants.js';
@@ -22,14 +22,14 @@ profileValidation.enableValidation();
 const cardFormValidation = new FormValidator(validationConfig, addForm);
 cardFormValidation.enableValidation();
 
-const openImagePopup = new PopupWithImage(popupImage);
+const popupImageOpen = new PopupWithImage(popupImage);
 
 //открытие попапа с картинкой
 const handleCardClick = ({title, link}) => {
-   openImagePopup.open({title, link});
+   popupImageOpen.open({title, link});
 };
 
-openImagePopup.setEventListeners();
+popupImageOpen.setEventListeners();
 
 //создание списка
 const cardList = new Section({
@@ -42,27 +42,27 @@ const cardList = new Section({
 cardList.renderer();
 
 //открытие формы редактирования
-editProfilePopupBtn.addEventListener('click', function () {
-   editProfileForm.open();
+profilePopupBtn.addEventListener('click', function () {
+   popupProfileForm.open();
    profileValidation.resetValidation()
    const allInfo = userInfo.getUserInfo();
-   editProfileForm.setInputValues(allInfo);
+   popupProfileForm.setInputValues(allInfo);
 });
 
 //открытие формы добавления карточки
-addPopupBtn.addEventListener('click', function () {
-   popupForm.open();
+popupAddBtn.addEventListener('click', function () {
+   popupAddForm.open();
    cardFormValidation.resetValidation()
 });
 
 //редактирование профиля
 const userInfo = new UserInfo({nameSelector: profileName, bioSelector: profileBio});
 
-const editProfileForm = new PopupWithForm(profilePopup, ({name, bio}) => {
+const popupProfileForm = new PopupWithForm(profilePopup, ({name, bio}) => {
    userInfo.setUserInfo({name, bio})
 })
 
-editProfileForm.setEventListeners();
+popupProfileForm.setEventListeners();
 
 //создание новой карточки
 function newCard(item) {
@@ -72,9 +72,9 @@ function newCard(item) {
 }
 
 //*/добавление карточки
-const popupForm = new PopupWithForm(addPopup, (item) => {
+const popupAddForm = new PopupWithForm(popupAdd, (item) => {
          cardList.addItem(newCard(item));
       }
 );
 
-popupForm.setEventListeners();
+popupAddForm.setEventListeners();
