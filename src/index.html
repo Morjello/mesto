@@ -21,13 +21,13 @@
       <!-- PROFILE -->
 
       <section class="profile">
-         <img src="<%=require('./images/Kusto.jpg')%>" alt="Кусто" class="profile__image">
+         <img src="" id="avatar" alt="Кусто" class="profile__image">
          <div class="profile__info">
             <div class="profile__cell">
-               <h1 class="profile__title">Жак-Ив Кусто</h1>
+               <h1 class="profile__title" id="name"></h1>
                <button type="button" class="profile__edit-button"></button>
             </div>
-            <p class="profile__text">Фотограф</p>
+            <p class="profile__text" id="about"></p>
          </div>
          <button type="button" class="profile__add-button"></button>
       </section>
@@ -99,6 +99,33 @@
             <button type="button" class="popup__close"></button>
          </div>
       </div>
+
+      <!-- POPUP-DELETE -->
+
+      <div class="popup popup__delete">
+         <div class="popup__container">
+            <h2 class="popup__title">Вы уверены?</h2>
+            <button class="popup__button" type="submit">Да</button>
+            <button type="button" class="popup__close"></button>
+         </div>
+      </div>
+
+      <!-- POPUP-EDIT-AVATAR -->
+
+      <div class="popup popup-avatar">
+         <div class="popup__container">
+            <h2 class="popup__title">Обновить аватар</h2>
+            <form action="" class="popup__form popup-avatar__form" name="avatar-form" novalidate>
+            <lable class="popup__label">
+               <input type="url" class="popup__input" id="avatar-link"
+               name="avatar-link" value="" placeholder="Ссылка на картинку" required>
+               <span class="popup__error avatar-link-error"></span>
+            </lable>
+            <button class="popup__button" type="submit">Сохранить</button>
+         </form>
+         <button type="button" class="popup__close"></button>
+         </div>
+      </div>
    </div>
 
    <!-- CARDS-TEMPLATE -->
@@ -113,7 +140,10 @@
          </button>
          <div class="cards__cell">
             <h2 class="cards__text"></h2>
-            <button type="button" class="cards__heart"></button>
+               <div class="cards__container">
+                  <button type="button" class="cards__heart"></button>
+                  <p class="cards__likes"></p>
+               </div>
          </div>
       </li>
    </template>

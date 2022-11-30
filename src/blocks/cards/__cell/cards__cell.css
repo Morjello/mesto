@@ -4,6 +4,5 @@
    align-items: center;
    min-height: 77px;
    max-width: 282px;
-   padding-left: 21px;
-   padding-right: 15px;
+   padding: 0 20px 0;
 }
