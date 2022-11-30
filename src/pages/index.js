@@ -45,7 +45,7 @@ Promise.all([api.getProfileInfo(), api.getInitialCards()])
    });
 
 //удаление карточки
-const popupDeleteCard = new PopupDelete('.popup__delete', handleSureCardDelete);
+const popupDeleteCard = new PopupDelete('.popup-delete', handleSureCardDelete);
 
 const handleClickDelete = (card) => {
    popupDeleteCard.open(card);

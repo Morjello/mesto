@@ -57,7 +57,7 @@
 @import url(../blocks/popup-image/__photo/popup-image__photo.css);
 @import url(../blocks/popup-image/__text/popup-image__text.css);
 /* POPUP-DELETE */
-@import url(../blocks/popup-delete/popup__delete.css);
+@import url(../blocks/popup-delete/popup-delete.css);
 /* POPUP-AVATAR */
 @import url(../blocks/popup-avatar/popup-avatar.css);
 @import url(../blocks/popup-avatar/__form/popup-avatar__form.css);
