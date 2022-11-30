@@ -7,9 +7,8 @@
 }
 
 .profile__image:hover {
-   cursor: pointer;
    opacity: 0.2;
-   cursor: url("../../../images/cursor.png"), pointer;;
+   cursor: url("../../../images/cursor.png"), pointer;
 }
 
 @media screen and (min-width: 768px) {
