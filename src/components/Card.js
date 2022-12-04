@@ -1,5 +1,3 @@
-import { api } from "./Api";
-
 export class Card {
    constructor(data, templateSelector, user, handleCardClick, handlePutLike, handleDeleteLike, handleClickDelete) {
       this._name = data.name;
@@ -24,7 +22,7 @@ export class Card {
    };
 
    setLike(data) {
-      this._element.querySelector('.cards__likes').textContent = data.length;
+      this._likeButton.textContent = data.length;
       this.likeBtn.classList.toggle('cards__heart_active');
    }
 
@@ -58,11 +56,14 @@ export class Card {
 
    addCard() {
       this._element = this._createCard();
+      this._likeButton = this._element.querySelector('.cards__likes');
+      this._cardImage = this._element.querySelector('.cards__image');
+      this.cardText = this._element.querySelector('.cards__text');
+      this.cardText.textContent = this._name;
+      this._cardImage.src = this._link;
+      this._cardImage.alt = this._name;
+      this._likeButton.textContent = this._like.length;
       this._setEventListeners();
-      this._element.querySelector('.cards__text').textContent = this._name;
-      this._element.querySelector('.cards__image').src = this._link;
-      this._element.querySelector('.cards__image').alt = this._name;
-      this._element.querySelector('.cards__likes').textContent = this._like.length;
 
       if (this._ownerId._id != this._userId) {
          this._element.querySelector('.cards__delete').remove();

@@ -16,7 +16,6 @@ class Api {
         headers: this._header
       })
       .then((res) => this._getResponseData(res))
-      .catch((err) => Promise.reject(err))
   }
 
   getInitialCards() {
@@ -24,7 +23,6 @@ class Api {
         headers: this._header
       })
       .then((res) => this._getResponseData(res))
-      .catch((err) => Promise.reject(err))
   }
 
   editProfileInfo(user) {
@@ -37,7 +35,6 @@ class Api {
         })
       })
       .then((res) => this._getResponseData(res))
-      .catch((err) => Promise.reject(err))
   }
 
   addNewCard(card) {
@@ -50,7 +47,6 @@ class Api {
         })
       })
       .then((res) => this._getResponseData(res))
-      .catch((err) => Promise.reject(err))
   };
 
   deleteCard(cardId) {
@@ -59,7 +55,6 @@ class Api {
       headers: this._header,
       })
     .then((res) => this._getResponseData(res))
-    .catch((err) => Promise.reject(err))
   }
 
   putLike(cardId) {
@@ -68,7 +63,6 @@ class Api {
       headers: this._header,
       })
     .then((res) => this._getResponseData(res))
-    .catch((err) => Promise.reject(err))
   };
 
   deleteLike(cardId) {
@@ -77,7 +71,6 @@ class Api {
       headers: this._header,
       })
     .then((res) => this._getResponseData(res))
-    .catch((err) => Promise.reject(err))
   };
 
   editUserAvatar(avatar) {
@@ -89,7 +82,6 @@ class Api {
       })
     })
     .then((res) => this._getResponseData(res))
-    .catch((err) => Promise.reject(err))
   }
 }
 

@@ -26,6 +26,10 @@ export class UserInfo {
         this._id = allData._id;
     }
 
+    setAvatar(avatar) {
+        this._avatar.src = avatar.avatar
+    }
+
     getUserId() {
         return this._id;
     } 

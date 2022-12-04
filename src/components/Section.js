@@ -12,8 +12,8 @@ export class Section {
       }
 
     renderer(items, userId) {
-        items.forEach(item => {
+        items.reverse().forEach(item => {
           this.#renderer(item, userId);
         });
       }
-}
+}  

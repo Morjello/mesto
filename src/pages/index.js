@@ -74,6 +74,7 @@ profilePopupBtn.addEventListener('click', function () {
 const popupProfileForm = new PopupWithForm('.profile-popup', (userData) => {
    api.editProfileInfo(userData).then((data) => {
       data = userInfo.setUserInfo(userData)
+      popupProfileForm.close();
    }).catch((err) => {
       console.log('Error updating profile', err);
    }).finally(() => popupProfileForm.loading(false))
@@ -90,7 +91,8 @@ editAvatarBtn.addEventListener('click', function () {
 //редактирование аватарa
 const popupAvatar = new PopupWithForm('.popup-avatar', (avatar) => {
    api.editUserAvatar(avatar['avatar-link']).then((avatarUrl) => {
-      document.querySelector('.profile__image').src = avatarUrl.avatar;
+      userInfo.setAvatar(avatarUrl);
+      popupAvatar.close();
    }).catch((err) => {
       console.log('Error updating avatar', err);
    }).finally(() => popupAvatar.loading(false))
@@ -139,6 +141,7 @@ function createNewCard(item) {
 const popupAddForm = new PopupWithForm('.popup-add', (cardData) => {
    api.addNewCard(cardData).then((item) => {
       cardList.addItem(createNewCard(item));
+      popupAddForm.close();
    }).catch((err) => {
       console.log('Error add card', err);
    }).finally(() => popupAddForm.loading(false))
